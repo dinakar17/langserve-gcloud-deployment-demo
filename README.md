@@ -6,7 +6,7 @@
 **Step 1: Clone the repository**
 
 ```bash
-git clone https://
+git clone https://github.com/dinakar17/langserve-gcloud-deployment-demo.git
 cd langserve-gcloud-deployment-demo
 ```
 
@@ -26,7 +26,14 @@ poetry install
 
 Note: If you get the error message `'poetry' is not recognized as an internal or external command` even after installing poetry, try to create a new conda environment and install poetry again.
 
-**Step 4: Run the application**
+**Step 4: Set up the environment variables**
+```bash
+cp .env.example .env
+```
+
+Update the `.env` file with the required values.
+
+**Step 5: Run the application**
 
 ```bash
 poetry run langchain serve --port=8080
